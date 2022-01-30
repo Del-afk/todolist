@@ -6,21 +6,24 @@ triggerEl.addEventListener("click", () => {
     let title = taskTitleEl.value;
 
     if(title == ""){
-        
+
     } else {
         addToList(title);
         taskTitleEl.value = "";
     }
 } );
 
-function addToList(boz) {
+function addToList(amqezi) {
     let myDiv = document.createElement("div");
     let myP = document.createElement("p");
     let myImg = document.createElement("img");
+    myImg.addEventListener("click" , () => {
+        myDiv.classList.add("deleted");
+    })
     myImg.src = "assets/delete.png";
-    myP.innerHTML = boz;
+    myDiv.classList.add("writedtasks");
+    myP.innerHTML = amqezi;
     myDiv.append(myP);
     myDiv.append(myImg);
-    myDiv.classList.add("writedtasks");
     listEl.append(myDiv);
 }

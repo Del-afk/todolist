@@ -20,6 +20,7 @@ body {
     border-radius: 50px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 0px 7px gray;
     .inputform {
         padding: 10px 0;
         position: absolute;
@@ -67,7 +68,15 @@ body {
                 width: 30px;
                 height: auto;
                 display: inline;
+                cursor: pointer;
 
+            }
+            &.deleted {
+                text-decoration: line-through;
+                img {
+                    width: 0;
+                    overflow: hidden;
+                }
             }
         }
     }
